@@ -18,8 +18,7 @@ export default function ContactForm() {
     const onSubmit: SubmitHandler<FormInputs> = data => console.log(data, touchedFields);
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <InputLabel >lklklk</InputLabel>
+        <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
             <TextField
                 {...register
                     ("emailAddress",
@@ -32,7 +31,7 @@ export default function ContactForm() {
                         })}
                 helperText={errors.emailAddress ? errors.emailAddress.message : null}
                 size="small"
-                placeholder="enter email address"
+                placeholder="example@example.com"
                 error={!!errors.emailAddress}
                 fullWidth
                 required

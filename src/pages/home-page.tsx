@@ -4,7 +4,7 @@ import ContactForm from '../components/contact-form'
 
 export default function HomePage() {
     return (
-        <section className='flex flex-col gap-10 items-center'>
+        <section className='flex flex-col gap-8 items-center home-page-container'>
             <Btn maxWidth={150} variant='contained' label={`I'm a button`} />
             <div className="cards-container">
                 <MyCard />

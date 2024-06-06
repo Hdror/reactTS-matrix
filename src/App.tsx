@@ -8,7 +8,7 @@ import Products from './pages/products'
 
 function App() {
   return (
-    <main className='px-5 md:px-10 flex flex-col gap-10 items-center pb-5'>
+    <main className='px-5 md:px-10 flex flex-col gap-3 items-center pb-5'>
       <NavBar />
       <Routes>
         <Route path="/contact" element={<Contact/>} />
