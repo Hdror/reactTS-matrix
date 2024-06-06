@@ -5,10 +5,11 @@ import HomePage from './pages/home-page'
 import Contact from './pages/contact'
 import Services from './pages/services'
 import Products from './pages/products'
+import Footer from './components/footer'
 
 function App() {
   return (
-    <main className='px-5 md:px-10 flex flex-col gap-3 items-center pb-12'>
+    <main className='min-h-screen relative px-5 md:px-10 flex flex-col gap-3 items-center pb-24'>
       <NavBar />
       <Routes>
         <Route path="/contact" element={<Contact/>} />
@@ -17,6 +18,7 @@ function App() {
         <Route path='/home' element={<Navigate to={'/'} replace />} />
         <Route path="/" element={<HomePage />} />
       </Routes>
+      <Footer/>
     </main>
   )
 }

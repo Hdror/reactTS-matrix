@@ -69,8 +69,8 @@ export default function NavBar(props: Props) {
             MUI
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Link to={`/${item.toLocaleLowerCase()}`}>
+            {navItems.map((item,idx) => (
+              <Link key={idx} to={`/${item.toLocaleLowerCase()}`}>
                 <Button key={item} sx={{ color: '#fff' }} >
                   {item}
                 </Button>

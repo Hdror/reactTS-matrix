@@ -1,7 +1,8 @@
 import { SubmitHandler, useForm } from "react-hook-form";
-import { InputLabel, TextField } from '@mui/material';
+import { Button, TextField } from '@mui/material';
+import SendIcon from '@mui/icons-material/Send';
 
-interface FormInputs  {
+interface FormInputs {
     emailAddress: string
 }
 
@@ -39,7 +40,9 @@ export default function ContactForm() {
                 label='email address'
                 variant="outlined"
             />
-            <button type="submit">Send</button>
+            <Button type="submit" variant="contained" endIcon={<SendIcon />}>
+                Send
+            </Button>
         </form>
 
     )
