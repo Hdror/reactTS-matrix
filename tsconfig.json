@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "composite": true,
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable","es6"],
     "module": "ESNext",
@@ -30,6 +29,6 @@
     "noImplicitThis": true,
     "strictNullChecks": true
   },
-  "include": ["src","vite.config,ts"],
+  "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
