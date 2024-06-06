@@ -1,9 +1,10 @@
-import { useForm } from "react-hook-form";
-import { InputLabel,TextField } from '@mui/material';
+import { SubmitHandler, useForm } from "react-hook-form";
+import { InputLabel, TextField } from '@mui/material';
 
-type FormInputs = {
+interface FormInputs  {
     emailAddress: string
 }
+
 
 export default function ContactForm() {
 
@@ -14,9 +15,11 @@ export default function ContactForm() {
         mode: 'onTouched'
     })
 
+    const onSubmit: SubmitHandler<FormInputs> = data => console.log(data, touchedFields);
+
     return (
-        <form>
-<InputLabel>lklklk</InputLabel>
+        <form onSubmit={handleSubmit(onSubmit)}>
+            <InputLabel >lklklk</InputLabel>
             <TextField
                 {...register
                     ("emailAddress",
@@ -37,6 +40,7 @@ export default function ContactForm() {
                 label='email address'
                 variant="outlined"
             />
+            <button type="submit">Send</button>
         </form>
 
     )
