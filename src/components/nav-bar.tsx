@@ -16,12 +16,11 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Avatar } from '@mui/material';
 
-interface Props { }
 
 const drawerWidth = 240;
 const navItems = ['home', 'services', 'products', 'contact'];
 
-export default function NavBar(props: Props) {
+export default function NavBar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
@@ -31,7 +30,7 @@ export default function NavBar(props: Props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        Dror Handler
       </Typography>
       <Divider />
       <List>
@@ -70,7 +69,7 @@ export default function NavBar(props: Props) {
             <Avatar>DH</Avatar>
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item,idx) => (
+            {navItems.map((item, idx) => (
               <Link key={idx} to={`/${item.toLocaleLowerCase()}`}>
                 <Button key={item} sx={{ color: '#fff' }} >
                   {item}
