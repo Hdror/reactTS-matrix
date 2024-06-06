@@ -15,6 +15,7 @@ export default function MyCard({
     cardTitle = defaultCardTitle, // Default title if no cardTitle prop is passed
     cardDesc = defaultCardDesc// Default description if no cardDesc prop is passed
 }: CardProps) {
+    
     // State to track if the image has loaded
     const [imgLoaded, setImgLoaded] = useState(false);
 

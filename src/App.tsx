@@ -6,9 +6,9 @@ function App() {
   return (
     <main className='px-5 md:px-10 flex flex-col gap-10'>
       <NavBar />
-      <Btn maxWidth={150} variant='contained' label='kaki' />
+      <Btn maxWidth={150} variant='contained' label={`I'm a button`} />
       <div className="cards-container">
-          <MyCard  />
+          <MyCard />
       </div>
     </main>
   )
