@@ -21,4 +21,10 @@ h6 {
     margin: 0;
 }
 
+.page-headline{
+    font-size: 1.5rem;
+    @include for-narrow-layout{
+        font-size: 3rem;
+    }
+}
 
