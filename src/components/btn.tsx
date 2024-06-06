@@ -1,12 +1,13 @@
 import { Button } from "@mui/material";
 interface BtnProps {
     label: string
-    variant: 'text' | 'contained' | 'outlined'
+    variant: 'text' | 'contained' | 'outlined',
+    maxWidth?: number
 }
 
-const Btn = (props:BtnProps) => {
+const Btn = (props: BtnProps) => {
     return (
-        <Button variant={props.variant}>
+        <Button style={{maxWidth:`${props.maxWidth}px`}} size="medium" variant={props.variant}>
             {props.label}
         </Button>
     )
