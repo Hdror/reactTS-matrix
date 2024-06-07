@@ -2,6 +2,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { Button, TextField } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 
+// Define the form input interface
 interface FormInputs {
     emailAddress: string
 }
@@ -9,13 +10,15 @@ interface FormInputs {
 
 export default function ContactForm() {
 
+    // Initialize useForm with default values and validation mode
     const { register, formState: { errors, touchedFields }, handleSubmit, } = useForm<FormInputs>({
         defaultValues: {
             emailAddress: ''
         },
-        mode: 'onTouched'
+        mode: 'onTouched' // Validation mode to trigger on touch
     })
 
+      // Define the onSubmit function to handle form submission
     const onSubmit: SubmitHandler<FormInputs> = data => console.log(data, touchedFields);
 
     return (

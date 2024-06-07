@@ -23,10 +23,12 @@ const navItems = ['home', 'services', 'products', 'contact'];
 export default function NavBar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  // Toggle function to open/close the mobile drawer
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
 
+  // Drawer component containing navigation items
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
